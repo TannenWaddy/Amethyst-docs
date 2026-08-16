@@ -1,6 +1,6 @@
 # Deeplink API
 
-Deeplink 可用于自动运行或唤起 ArcMC 并执行一些操作，适合网页、工具链、桌面快捷方式等外部集成场景。
+Deeplink 可用于自动运行或唤起 Amethyst 并执行一些操作，适合网页、工具链、桌面快捷方式等外部集成场景。
 协议名固定为 `arcmc://`
 
 > [!NOTE]
@@ -31,14 +31,14 @@ arcmc://add-auth-server?url=https%3A%2F%2Flittleskin.cn%2Fapi%2Fyggdrasil
 arcmc://add-auth-server?url=https%3A%2F%2Fexample.com%2Fapi%2Fyggdrasil
 ```
 
-### 在 Blessing-Skin 仪表盘添加"添加到 ArcMC"按钮
+### 在 Blessing-Skin 仪表盘添加"添加到 Amethyst"按钮
 
 需要安装 `Yggdrasil Connect` 和 `Yggdrasil API` 插件。在"管理面板"的"个性化"页面中添加以下 JavaScript 脚本。
 ```javascript
 var yggBtn = document.getElementById('ygg-dnd-button');
 var button = document.createElement('button');
 button.className = 'btn btn-info ml-2';
-button.textContent = '添加到 ArcMC';
+button.textContent = '添加到 Amethyst';
 button.setAttribute(
   'onclick',
   'location.href="arcmc://add-auth-server?url=' +
@@ -50,7 +50,7 @@ yggBtn.parentNode.insertBefore(button, yggBtn.nextSibling);
 
 ## `launch`
 
-启动实例，并直接进入启动流程。ArcMC 本身也使用这一端点生成启动实例的桌面快捷方式。
+启动实例，并直接进入启动流程。Amethyst 本身也使用这一端点生成启动实例的桌面快捷方式。
 
 ### 格式
 

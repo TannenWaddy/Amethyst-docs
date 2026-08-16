@@ -1,6 +1,6 @@
 import { defineConfig, type DefaultTheme } from "vitepress";
 
-const BASE = "/ArcMCL-docs/";
+const BASE = "/Amethyst-docs/";
 const FAVICON_URL = `${BASE}logo.png`;
 const localSearch = {
   provider: "local",
@@ -90,7 +90,7 @@ function createBreadcrumbs(relativePath: string, title: string) {
 const sharedThemeConfig = {
   logo: "/logo.png",
   siteTitle: false,
-  socialLinks: [{ icon: "github", link: "https://github.com/TannenWaddy/ArcMC-Launcher" }],
+  socialLinks: [{ icon: "github", link: "https://github.com/TannenWaddy/Amethyst-Launcher" }],
   search: localSearch,
 } satisfies DefaultTheme.Config;
 
@@ -133,8 +133,8 @@ function renderChangelogGitHubMarks(text: string, escapeHtml: (str: string) => s
 }
 
 export default defineConfig({
-  title: "ArcMC Launcher",
-  description: "Docs for the ArcMC Launcher",
+  title: "Amethyst Launcher",
+  description: "Docs for the Amethyst Launcher",
   base: BASE,
   themeConfig: {
     search: localSearch,
@@ -212,10 +212,7 @@ export default defineConfig({
                   text: "启动器 MCP 服务",
                   link: "/docs/intelligence/launcher-mcp",
                 },
-                {
-                  text: "MiuChat",
-                  link: "/docs/intelligence/miuchat",
-                },
+
               ],
             },
             { text: "背景图库", link: "/docs/background-gallery" },
@@ -340,10 +337,7 @@ export default defineConfig({
                   text: "啟動器 MCP 服務",
                   link: "/zh-Hant/docs/intelligence/launcher-mcp",
                 },
-                {
-                  text: "MiuChat",
-                  link: "/zh-Hant/docs/intelligence/miuchat",
-                },
+
               ],
             },
             { text: "背景圖庫", link: "/zh-Hant/docs/background-gallery" },

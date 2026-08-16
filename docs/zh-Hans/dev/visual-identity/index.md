@@ -1,7 +1,7 @@
-# ArcMC 视觉形象
+# Amethyst 视觉形象
 
-ArcMC Launcher 采用简洁灵动的设计风格，我们希望以此带给用户最佳的使用体验。
-此章节提供 ArcMC Launcher 的部分设计原稿与设计元素，供各位开发者发挥创意，基于 ArcMC 进行相关开发与二次创作。
+Amethyst Launcher 采用简洁灵动的设计风格，我们希望以此带给用户最佳的使用体验。
+此章节提供 Amethyst Launcher 的部分设计原稿与设计元素，供各位开发者发挥创意，基于 Amethyst 进行相关开发与二次创作。
 
 > [!NOTE]
 >

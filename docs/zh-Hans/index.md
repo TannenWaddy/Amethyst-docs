@@ -1,13 +1,13 @@
 ---
 home: true
 layout: home
-title: ArcMC Launcher
-titleTemplate: 一款基于 SJMCL 的 Minecraft 启动器
+title: Amethyst Launcher
+titleTemplate: 一款基于 SJMCL 源码的 Minecraft 启动器
 hero:
-  name: ArcMC Launcher
+  name: Amethyst Launcher
   text: ''
   tagline: |
-    基于 SJMCL 源码修改，仅支持 Windows
+    基于 SJMCL 启动器
   actions:
     - theme: brand
       text: 下载
@@ -17,7 +17,7 @@ hero:
       link: /docs/
     - theme: alt
       text: GitHub
-      link: https://github.com/TannenWaddy/ArcMC-Launcher
+      link: https://github.com/TannenWaddy/Amethyst-Launcher
 features:
   - icon: 🖥️
     title: Windows 平台

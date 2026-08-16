@@ -3,16 +3,15 @@ import { computed } from 'vue'
 import { useData, withBase } from 'vitepress'
 
 const launcherLogo = withBase('/logo.png')
-const sjmcLightLogo = withBase('/partners/sjmc.png')
-const sjmcDarkLogo = withBase('/partners/sjmc-dark.png')
+
 const { frontmatter, lang } = useData()
 const currentYear = new Date().getFullYear()
 
 const isEnglish = computed(() => lang.value === 'en-US')
 const hasSidebarLayout = computed(() => frontmatter.value.layout !== 'home')
-const partnerAlt = computed(() => isEnglish.value ? 'SJTU Minecraft Club' : '上海交通大学 Minecraft 社')
+
 const copyrightText = computed(() => (
-  isEnglish.value ? `${currentYear} © SJMCL Team` : `${currentYear} © SJMCL 团队`
+  isEnglish.value ? `${currentYear} © Amethyst Launcher Team` : `${currentYear} © Amethyst Launcher 团队`
 ))
 const disclaimerText = computed(() => (
   isEnglish.value ? `NOT AN OFFICIAL MINECRAFT SERVICE. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.` : `本软件非 Minecraft 官方产品。未经 Mojang 或 Microsoft 批准，也不与 Mojang 或 Minecraft 关联。`
@@ -29,33 +28,21 @@ const disclaimerText = computed(() => (
         <div class="sjmcl-site-footer__launcher">
           <img
             :src="launcherLogo"
-            alt="SJMC Launcher"
+            alt="Amethyst Launcher"
             class="sjmcl-site-footer__launcher-logo"
           >
           <div class="sjmcl-site-footer__title">
-            <span>SJMC</span>
+            <span>Amethyst</span>
             <span class="highlight">&nbsp;L</span>
             <span>auncher</span>
           </div>
         </div>
 
-        <div class="sjmcl-site-footer__partner">
-          <img
-            :src="sjmcLightLogo"
-            :alt="partnerAlt"
-            class="sjmcl-site-footer__partner-logo sjmcl-site-footer__partner-logo--light"
-          >
-          <img
-            :src="sjmcDarkLogo"
-            :alt="partnerAlt"
-            class="sjmcl-site-footer__partner-logo sjmcl-site-footer__partner-logo--dark"
-          >
-        </div>
+
       </div>
     </div>
 
     <div class="sjmcl-site-footer__meta">
-      <p>沪 ICP 备 05052060 号-7</p>
       <p>{{ copyrightText }}</p>
 	  <p>{{ disclaimerText }}</p>
     </div>
@@ -126,28 +113,6 @@ const disclaimerText = computed(() => (
   color: #7cc0ff;
 }
 
-.sjmcl-site-footer__partner {
-  display: inline-flex;
-  align-items: center;
-}
-
-.sjmcl-site-footer__partner-logo {
-  display: block;
-  height: 65px;
-  width: auto;
-}
-
-.sjmcl-site-footer__partner-logo--dark {
-  display: none;
-}
-
-.dark .sjmcl-site-footer__partner-logo--light {
-  display: none;
-}
-
-.dark .sjmcl-site-footer__partner-logo--dark {
-  display: block;
-}
 
 .sjmcl-site-footer__meta {
   display: flex;

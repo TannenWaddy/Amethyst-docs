@@ -1,4 +1,4 @@
-# ArcMC Docs
+# Amethyst Docs
 
 这是一个基于 VitePress 的文档项目。
 

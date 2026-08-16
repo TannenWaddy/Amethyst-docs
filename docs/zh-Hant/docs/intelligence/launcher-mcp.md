@@ -35,7 +35,7 @@ Cherry Studio 原生支持 HTTP (SSE) 模式，配置过程直观便捷。
 
    | 选项 | 填写说明 | 示例值 |
    | :--- | :--- | :--- |
-   | **名称** | 自定义服务名称 | `ArcMC` |
+   | **名称** | 自定义服务名称 | `Amethyst` |
    | **类型** | 必须选择此项 | `可流式传输的 HTTP (streamableHTTP)` |
    | **URL** | 格式：`http://127.0.0.1:{端口号}/mcp` | `http://127.0.0.1:18970/mcp` |
 
@@ -53,7 +53,7 @@ Cherry Studio 原生支持 HTTP (SSE) 模式，配置过程直观便捷。
 3. 点击助手名称右侧的 **更多选项** (••• 三点图标) 进入设置。
 4. **模型检查**：确保"模型设置"中选择了一个可正常使用的模型（[参考 Cherry Studio 添加模型文档](https://docs.cherry-ai.com/pre-basic/providers)）。
 5. 向下滚动找到 **MCP 服务** 选项。
-6. 开启 **手动模式**，找到刚才添加的 `ArcMC` 服务，将其开关拨到 **打开** 状态。
+6. 开启 **手动模式**，找到刚才添加的 `Amethyst` 服务，将其开关拨到 **打开** 状态。
    ![](/images/launcher-mcp-cherrystudio-step3.png)
 
 #### 第三步：验证与使用

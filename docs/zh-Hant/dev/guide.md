@@ -10,9 +10,9 @@
 
 对于 Linux 系统，可能还需要安装一些前置依赖，参见 [Tauri Prerequisites](https://tauri.app/start/prerequisites/)。
 
-Fork [本仓库](https://github.com/TannenWaddy/ArcMC-Launcher)，然后克隆之。
+Fork [本仓库](https://github.com/TannenWaddy/Amethyst-Launcher)，然后克隆之。
 ```bash
-git clone git@github.com:<your-github-username>/ArcMC-Launcher.git
+git clone git@github.com:<your-github-username>/Amethyst-Launcher.git
 ```
 
 然后安装依赖。

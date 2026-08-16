@@ -1,6 +1,6 @@
 # 下载与安装
 
-前往 [GitHub Releases](https://github.com/TannenWaddy/ArcMC-Launcher/releases) 下载最新版本。
+前往 [GitHub Releases](https://github.com/TannenWaddy/Amethyst-Launcher/releases) 下载最新版本。
 
 ## 支持的平台
 
@@ -12,7 +12,7 @@
 
 1. 从 GitHub Releases 下载最新的安装器 `.exe` 文件。
 2. 双击运行安装器，按提示完成安装。
-3. 安装完成后，从开始菜单或桌面快捷方式启动 ArcMC Launcher。
+3. 安装完成后，从开始菜单或桌面快捷方式启动 Amethyst Launcher。
 
 > [!NOTE]
 > 目前仅提供 Windows 平台的安装器版本。macOS 和 Linux 暂不支持。

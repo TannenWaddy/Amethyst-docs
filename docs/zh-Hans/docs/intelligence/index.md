@@ -1,6 +1,6 @@
-# ArcMC 智能
+# Amethyst 智能
 
-ArcMC 期望将人工智能模型整合进您的启动器使用与 Minecraft 游玩体验。
+Amethyst 期望将人工智能模型整合进您的启动器使用与 Minecraft 游玩体验。
 
 ## 当前内容
 

@@ -1,6 +1,6 @@
 # 简介
 
-ArcMC Launcher 是一款基于 [SJMCL](https://github.com/UNIkeEN/SJMCL) 源码修改的 Minecraft 启动器，目前仅支持 Windows 平台。
+Amethyst Launcher 是一款基于 [SJMCL](https://github.com/UNIkeEN/SJMCL) 源码的 Minecraft 启动器，目前仅支持 Windows 平台。
 
 > [!IMPORTANT]
 > 本软件非 Minecraft 官方产品。未经 Mojang 或 Microsoft 批准，也不与 Mojang 或 Minecraft 关联。

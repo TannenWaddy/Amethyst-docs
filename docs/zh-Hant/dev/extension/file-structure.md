@@ -20,7 +20,7 @@ org.example.hello/
 {
   "identifier": "org.example.hello",
   "name": "Hello Extension",
-  "description": "My first ArcMC extension.",
+  "description": "My first Amethyst extension.",
   "author": "Example Team",
   "version": "0.1.0",
   "minimalLauncherVersion": "0.8.0",

@@ -1,5 +1,5 @@
 # 快速开始（手动编写）
-除了使用脚手架，你也可以手动编写一个最小可运行的 ArcMC 扩展。
+除了使用脚手架，你也可以手动编写一个最小可运行的 Amethyst 扩展。
 
 ## 第一步：创建目录
 
@@ -20,7 +20,7 @@ org.example.hello/
 {
   "identifier": "org.example.hello",
   "name": "Hello Extension",
-  "description": "My first ArcMC extension.",
+  "description": "My first Amethyst extension.",
   "version": "0.1.0",
   "minimalLauncherVersion": "0.8.0",
   "frontend": {
@@ -140,7 +140,7 @@ return {
 
 ## 第五步：打包
 
-ArcMC 目前接受 `.arcmcx` 和 `.zip`。本质上它们都是 zip 包，只是 `.arcmcx` 更适合作为扩展分发格式。
+Amethyst 目前接受 `.arcmcx` 和 `.zip`。本质上它们都是 zip 包，只是 `.arcmcx` 更适合作为扩展分发格式。
 如果你的扩展目录是 `org.example.hello/`，可以直接把它压缩成一个包：
 ```bash
 zip -r org.example.hello.arcmcx org.example.hello
@@ -148,7 +148,7 @@ zip -r org.example.hello.arcmcx org.example.hello
 
 你也可以生成 `org.example.hello.zip`，启动器同样可以识别。
 
-## 第六步：安装到 ArcMC
+## 第六步：安装到 Amethyst
 
 1. 打开启动器
 2. 进入"设置"

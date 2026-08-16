@@ -35,9 +35,9 @@ const props = defineProps<{
   section: 'hero' | 'cards'
 }>()
 
-const API_URL = 'https://mc.sjtu.cn/api-sjmcl/releases/latest'
-const DOWNLOAD_BASE_URL = 'https://mc.sjtu.cn/sjmcl/releases/'
-const GITHUB_RELEASES_URL = 'https://github.com/UNIkeEN/SJMCL/releases'
+const GITHUB_REPO = 'TannenWaddy/Amethyst-Launcher'
+const GITHUB_RELEASES_URL = `https://github.com/${GITHUB_REPO}/releases`
+const GITHUB_DOWNLOAD_URL = `https://github.com/${GITHUB_REPO}/releases/download/`
 
 const { frontmatter, lang } = useData()
 const sharedRelease = ref<ReleaseResponse | null>(null)
@@ -165,7 +165,8 @@ function formatSize(size: number) {
 }
 
 function fileUrl(name: string) {
-  return `${DOWNLOAD_BASE_URL}${name}`
+  const version = sharedRelease.value?.version || 'latest'
+  return `${GITHUB_DOWNLOAD_URL}${version}/${name}`
 }
 
 function normalizeArch(name: string) {
@@ -353,15 +354,9 @@ async function ensureReleaseLoaded() {
     return
 
   if (!sharedLoadPromise) {
-    const requestUrl = typeof window === 'undefined'
-      ? API_URL
-      : (window.location.hostname === 'mc.sjtu.cn' ? API_URL : '/api-sjmcl/releases/latest')
+    const requestUrl = withBase('/releases.json')
 
-    sharedLoadPromise = fetch(requestUrl, {
-      headers: {
-        Accept: 'application/json'
-      }
-    })
+    sharedLoadPromise = fetch(requestUrl)
       .then(async (response) => {
         if (!response.ok)
           throw new Error(`Unexpected response: ${response.status} ${response.statusText}`)
@@ -375,11 +370,7 @@ async function ensureReleaseLoaded() {
       .catch((error) => {
         sharedLoadFailed.value = true
         if (typeof window !== 'undefined') {
-          console.error('[DownloadsPage] Failed to load latest release', {
-            requestUrl,
-            pageUrl: window.location.href,
-            error
-          })
+          console.error('[DownloadsPage] Failed to load releases.json', error)
         }
       })
       .finally(() => {
