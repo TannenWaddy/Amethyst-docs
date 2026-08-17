@@ -1,9 +1,9 @@
 # 文件结构
 
-扩展以 Zip 压缩包格式存储，扩展名为 `.arcmcx`，其解压后通常包含以下内容。
+扩展以 Zip 压缩包格式存储，扩展名为 `.amethystx`，其解压后通常包含以下内容。
 ```text
 org.example.hello/
-├─ arcmc.ext.json
+├─ amethyst.ext.json
 ├─ icon.png
 ├─ frontend/
 │  └─ index.js
@@ -12,7 +12,7 @@ org.example.hello/
 └─ data/
 ```
 
-## `arcmc.ext.json`
+## `amethyst.ext.json`
 
 扩展清单文件，必须位于根目录。
 示例：
@@ -70,7 +70,7 @@ window.registerExtension(factory, token);
 ## `frontend/`
 
 前端入口与相关脚本所在目录。
-`arcmc.ext.json` 中的 `frontend.entry` 指向这个入口文件。
+`amethyst.ext.json` 中的 `frontend.entry` 指向这个入口文件。
 
 ## `assets/`
 

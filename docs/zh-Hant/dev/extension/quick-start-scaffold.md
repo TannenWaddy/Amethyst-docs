@@ -9,26 +9,26 @@
 ## 第一步：安装脚手架
 先全局安装：
 ```bash
-npm install -g create-arcmc-extension
+npm install -g create-amethyst-extension
 ```
 
 ## 第二步：创建项目
 
 安装完成后，运行：
 ```bash
-npx create-arcmc-extension
+npx create-amethyst-extension
 ```
 
 ## 第三步：按提示填写扩展信息
 脚手架会依次询问这些字段：
-- `Project directory`：项目目录，默认为 `my-arcmc-extension`
+- `Project directory`：项目目录，默认为 `my-amethyst-extension`
 - `Extension identifier`：扩展标识，必须符合 `org.example.hello` 这样的命名空间格式
 - `Extension name`：扩展显示名称
 - `Extension description`：（可选）扩展描述
 - `Extension author`：（可选）扩展作者
 - `Extension version`：（可选）扩展版本；如填写，必须是合法语义化版本
 - `Minimal launcher version`：（可选）扩展要求的最低启动器版本；如填写，必须是合法语义化版本
-- `Frontend entry`：最终写入 `arcmc.ext.json` 的前端入口，默认为 `frontend/index.js`
+- `Frontend entry`：最终写入 `amethyst.ext.json` 的前端入口，默认为 `frontend/index.js`
 
 如果项目目录已经存在且不是空目录，脚手架会先询问你是否覆盖。
 
@@ -38,7 +38,7 @@ npx create-arcmc-extension
 my-extension/
 ├─ README.md
 ├─ package.json
-├─ arcmc.ext.json
+├─ amethyst.ext.json
 ├─ tsconfig.json
 ├─ scripts/
 │  ├─ build.mjs
@@ -74,18 +74,18 @@ npm run build
 `npm run build` 会完成这些事情：
 
 - 使用 `esbuild` 将 `src/index.ts` 打包成单个前端入口文件
-- 将 `arcmc.ext.json` 中的 `frontend.entry` 输出到扩展目录
-- 复制 `arcmc.ext.json`
+- 将 `amethyst.ext.json` 中的 `frontend.entry` 输出到扩展目录
+- 复制 `amethyst.ext.json`
 - 如果存在，也会复制 `icon.png`、`assets/` 和 `data/`
 - 生成 `dist/<identifier>/`
-- 额外打包出 `dist/<identifier>-<version>.arcmcx`
+- 额外打包出 `dist/<identifier>-<version>.amethystx`
 
 如果你修改了版本号，建议使用：
 ```bash
 npm run bump -- 0.1.1
 ```
 
-这个命令会同时更新 `package.json` 和 `arcmc.ext.json` 里的版本字段。
+这个命令会同时更新 `package.json` 和 `amethyst.ext.json` 里的版本字段。
 
 ## 第六步：在模板基础上继续开发
 脚手架生成的 `src/index.ts` 已经注册好了扩展，并接入了几个示例贡献点。你通常只需要从这些位置开始修改：
@@ -98,8 +98,8 @@ npm run bump -- 0.1.1
 
 ## 第七步：安装到 Amethyst
 
-构建完成后，在启动器中导入 `dist/<identifier>-<version>.arcmcx` 即可。
+构建完成后，在启动器中导入 `dist/<identifier>-<version>.amethystx` 即可。
 1. 打开启动器
 2. 进入"设置"
 3. 打开"扩展"页面
-4. 点击"添加"并选择刚才生成的 `.arcmcx` 文件
+4. 点击"添加"并选择刚才生成的 `.amethystx` 文件

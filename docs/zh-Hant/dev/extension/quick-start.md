@@ -6,7 +6,7 @@
 先建立一个扩展目录，例如：
 ```text
 org.example.hello/
-├─ arcmc.ext.json
+├─ amethyst.ext.json
 ├─ icon.png
 └─ frontend/
    └─ index.js
@@ -14,7 +14,7 @@ org.example.hello/
 
 目录名可以与 `identifier` 保持一致，便于调试与重新打包。
 
-## 第二步：编写 `arcmc.ext.json`
+## 第二步：编写 `amethyst.ext.json`
 
 ```json
 {
@@ -140,10 +140,10 @@ return {
 
 ## 第五步：打包
 
-Amethyst 目前接受 `.arcmcx` 和 `.zip`。本质上它们都是 zip 包，只是 `.arcmcx` 更适合作为扩展分发格式。
+Amethyst 目前接受 `.amethystx` 和 `.zip`。本质上它们都是 zip 包，只是 `.amethystx` 更适合作为扩展分发格式。
 如果你的扩展目录是 `org.example.hello/`，可以直接把它压缩成一个包：
 ```bash
-zip -r org.example.hello.arcmcx org.example.hello
+zip -r org.example.hello.amethystx org.example.hello
 ```
 
 你也可以生成 `org.example.hello.zip`，启动器同样可以识别。
@@ -153,7 +153,7 @@ zip -r org.example.hello.arcmcx org.example.hello
 1. 打开启动器
 2. 进入"设置"
 3. 打开"扩展"页面
-4. 点击"添加"并选择刚才生成的 `.arcmcx` 或 `.zip`
+4. 点击"添加"并选择刚才生成的 `.amethystx` 或 `.zip`
 
 安装成功后，扩展会默认加入启用列表。若你的扩展提供了首页卡片或页面，它会在刷新扩展列表后自动加载。
 
@@ -167,7 +167,7 @@ zip -r org.example.hello.arcmcx org.example.hello
 - 需要重新激活时，调用 `host.actions.reloadSelf()`
 
 如果扩展导入失败，优先检查这几项：
-- `arcmc.ext.json` 是否在扩展根目录
+- `amethyst.ext.json` 是否在扩展根目录
 - `identifier` 是否合法
 - `frontend.entry` 路径是否存在
 - `minimalLauncherVersion` 是否高于启动器版本

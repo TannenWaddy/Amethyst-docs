@@ -19,8 +19,8 @@ Amethyst 的扩展系统是一套前端扩展运行时，旨在拓展启动器�
 
 扩展从导入到挂载的流程如下：
 
-1. 用户导入 `.arcmcx` 或 `.zip` 包。
-2. 启动器解压扩展包并读取 `arcmc.ext.json`。
+1. 用户导入 `.amethystx` 或 `.zip` 包。
+2. 启动器解压扩展包并读取 `amethyst.ext.json`。
 3. 若存在 `frontend.entry`，启动器加载对应脚本。
 4. 脚本读取 `document.currentScript.dataset.extensionToken`。
 5. 脚本调用 `window.registerExtension(factory, token)`。

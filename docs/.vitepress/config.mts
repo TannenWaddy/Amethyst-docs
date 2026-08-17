@@ -119,10 +119,10 @@ function renderChangelogGitHubMarks(text: string, escapeHtml: (str: string) => s
 
     if (token.startsWith("#")) {
       const prNumber = token.slice(1);
-      result += `<a class="arcmc-changelog-ref" href="https://github.com/UNIkeEN/SJMCL/pull/${prNumber}" target="_blank" rel="noreferrer">${escapeHtml(token)}</a>`;
+      result += `<a class="amethyst-changelog-ref" href="https://github.com/UNIkeEN/SJMCL/pull/${prNumber}" target="_blank" rel="noreferrer">${escapeHtml(token)}</a>`;
     } else {
       const username = token.slice(1).replace(/\[bot\]$/, "");
-      result += `<a class="arcmc-changelog-ref arcmc-changelog-mention" href="https://github.com/${username}" target="_blank" rel="noreferrer"><strong>${escapeHtml(token)}</strong></a>`;
+      result += `<a class="amethyst-changelog-ref amethyst-changelog-mention" href="https://github.com/${username}" target="_blank" rel="noreferrer"><strong>${escapeHtml(token)}</strong></a>`;
     }
 
     lastIndex = index + token.length;

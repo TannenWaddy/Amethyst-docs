@@ -1,7 +1,7 @@
 # Deeplink API
 
 Deeplink 可用于自动运行或唤起 Amethyst 并执行一些操作，适合网页、工具链、桌面快捷方式等外部集成场景。
-协议名固定为 `arcmc://`
+协议名固定为 `amethyst://`
 
 > [!NOTE]
 > Windows 和 Linux 便携版需要至少运行一次方可使用；macOS 的 DMG 版本可以使用该功能。
@@ -15,7 +15,7 @@ Deeplink 可用于自动运行或唤起 Amethyst 并执行一些操作，适合�
 ### 格式
 
 ```sh
-arcmc://add-auth-server?url=<server_url>
+amethyst://add-auth-server?url=<server_url>
 ```
 
 ### 参数
@@ -27,8 +27,8 @@ arcmc://add-auth-server?url=<server_url>
 ### 示例
 
 ```sh
-arcmc://add-auth-server?url=https%3A%2F%2Flittleskin.cn%2Fapi%2Fyggdrasil
-arcmc://add-auth-server?url=https%3A%2F%2Fexample.com%2Fapi%2Fyggdrasil
+amethyst://add-auth-server?url=https%3A%2F%2Flittleskin.cn%2Fapi%2Fyggdrasil
+amethyst://add-auth-server?url=https%3A%2F%2Fexample.com%2Fapi%2Fyggdrasil
 ```
 
 ### 在 Blessing-Skin 仪表盘添加"添加到 Amethyst"按钮
@@ -41,7 +41,7 @@ button.className = 'btn btn-info ml-2';
 button.textContent = '添加到 Amethyst';
 button.setAttribute(
   'onclick',
-  'location.href="arcmc://add-auth-server?url=' +
+  'location.href="amethyst://add-auth-server?url=' +
   encodeURIComponent(yggBtn.getAttribute('data-clipboard-text')) +
   '"'
 );
@@ -55,7 +55,7 @@ yggBtn.parentNode.insertBefore(button, yggBtn.nextSibling);
 ### 格式
 
 ```sh
-arcmc://launch?[id=<instance_id>][&playerId=<player_id>][&quickPlaySingleplayer=<world_name>][&quickPlayMultiplayer=<server_addr>]
+amethyst://launch?[id=<instance_id>][&playerId=<player_id>][&quickPlaySingleplayer=<world_name>][&quickPlayMultiplayer=<server_addr>]
 ```
 
 ### 参数
@@ -76,9 +76,9 @@ arcmc://launch?[id=<instance_id>][&playerId=<player_id>][&quickPlaySingleplayer=
 ### 示例
 
 ```sh
-arcmc://launch?id=OFFICIAL_DIR%3A1.20.1
-arcmc://launch?id=CURRENT_DIR%3AFabric%201.20.1&playerId=e9755ca2-6ebf-4ea7-a548-cf1074ab7f0f
-arcmc://launch?id=OFFICIAL_DIR%3A1.20.1&quickPlaySingleplayer=My%20World
-arcmc://launch?id=OFFICIAL_DIR%3A1.20.1&quickPlayMultiplayer=mc.example.com%3A25565
-arcmc://launch?id=tbd&playerId=tbd
+amethyst://launch?id=OFFICIAL_DIR%3A1.20.1
+amethyst://launch?id=CURRENT_DIR%3AFabric%201.20.1&playerId=e9755ca2-6ebf-4ea7-a548-cf1074ab7f0f
+amethyst://launch?id=OFFICIAL_DIR%3A1.20.1&quickPlaySingleplayer=My%20World
+amethyst://launch?id=OFFICIAL_DIR%3A1.20.1&quickPlayMultiplayer=mc.example.com%3A25565
+amethyst://launch?id=tbd&playerId=tbd
 ```
